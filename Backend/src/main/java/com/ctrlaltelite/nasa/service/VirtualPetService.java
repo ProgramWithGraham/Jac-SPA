@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.ctrlaltelite.nasa.entity.VirtualPet;
-import com.ctrlaltelite.nasa.repository.VirtualPetRepository;
+import com.ctrlaltelite.nasa.repository.NasaRepository;
 
 @SuppressWarnings("null")
 @Service
 public class VirtualPetService {
 
     @Autowired
-    private VirtualPetRepository virtualPetRepo;
+    private NasaRepository virtualPetRepo;
 
     /*
      * Adds a new Pet to the repository (db)

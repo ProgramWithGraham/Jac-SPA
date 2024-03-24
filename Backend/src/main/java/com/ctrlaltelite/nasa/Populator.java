@@ -7,14 +7,14 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.ctrlaltelite.nasa.entity.VirtualPet;
-import com.ctrlaltelite.nasa.repository.VirtualPetRepository;
+import com.ctrlaltelite.nasa.repository.NasaRepository;
 
 @Component
 
 public class Populator implements CommandLineRunner {
 
         @Autowired
-        private VirtualPetRepository virtualPetRepository;
+        private NasaRepository virtualPetRepository;
 
         @Override
         public void run(String... args) throws Exception {
