@@ -1,4 +1,4 @@
-package com.ctrlaltelite.virtualpetapi.controller;
+package com.ctrlaltelite.nasa.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.ctrlaltelite.nasa.entity.VirtualPet;
+import com.ctrlaltelite.nasa.service.VirtualPetService;
+
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.ctrlaltelite.virtualpetapi.entity.VirtualPet;
-import com.ctrlaltelite.virtualpetapi.service.VirtualPetService;
 
 @RestController
 @RequestMapping("/api/pets")
@@ -40,7 +42,7 @@ public class VirtualPetController {
     }
 
     // this allows us to find a pet by it Id
-    @GetMapping("/{id}")
+    @GetMapping("/{date}")
     public VirtualPet findVirtualPetById(@PathVariable long id) {
         return this.virtualPetServ.getVirtualPetById(id);
     }

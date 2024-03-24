@@ -1,4 +1,4 @@
-package com.ctrlaltelite.virtualpetapi.service;
+package com.ctrlaltelite.nasa.service;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.ctrlaltelite.virtualpetapi.entity.VirtualPet;
-import com.ctrlaltelite.virtualpetapi.repository.VirtualPetRepository;
+import com.ctrlaltelite.nasa.entity.VirtualPet;
+import com.ctrlaltelite.nasa.repository.VirtualPetRepository;
 
 @SuppressWarnings("null")
 @Service
