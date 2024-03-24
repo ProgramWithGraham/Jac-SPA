@@ -5,23 +5,25 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.ctrlaltelite.nasa.entity.VirtualPet;
+import com.ctrlaltelite.nasa.entity.Nasa;
 import com.ctrlaltelite.nasa.repository.NasaRepository;
 
 @SuppressWarnings("null")
 @Service
-public class VirtualPetService {
+public class NasaService {
 
     @Autowired
-    private NasaRepository virtualPetRepo;
+    private NasaRepository nasaRepo;
 
     /*
      * Adds a new Pet to the repository (db)
      */
-    public void createVirtualPet(VirtualPet virtualPetNew) {
-        this.virtualPetRepo.save(virtualPetNew);
+    public void saveFact( Nasa nasa) {
+        nasaRepo.save(nasa);
+        nasaRepo.
     }
 
     /*
@@ -41,10 +43,10 @@ public class VirtualPetService {
     /*
      * Gets a specific Pet by its Id
      */
-    public VirtualPet getVirtualPetById(long id) {
-        return this.virtualPetRepo.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + id));
-    }
+    //public Nasa getNasaFactByDate(String date) {
+        //return this.nasaRepo.findByDate(date)
+               // .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + id));
+    
 
     /*
      * Updates an existing Pet
