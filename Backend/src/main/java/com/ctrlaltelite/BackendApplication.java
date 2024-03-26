@@ -1,11 +1,11 @@
-package com.ctrlaltelite.nasa;
+package com.ctrlaltelite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VirtualpetapiApplication {
+public class BackendApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(VirtualpetapiApplication.class, args);
+		SpringApplication.run(BackendApplication.class, args);
 	}
 }
