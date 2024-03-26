@@ -24,41 +24,34 @@ public class NasaController {
     @Autowired
     private NasaService nasaServ;
 
-
-
     // used as a way to make sure mapping is working
     @GetMapping("/ping")
     public String pingPong() {
         return "pong";
     }
 
-    // add a new pet
+    // save a Nasa fact
     @PostMapping("/save")
     public void saveFact(@RequestBody Nasa nasa) {
-    nasaServ.saveFact(nasa);
+        nasaServ.saveFact(nasa);
     }
 
-    // this allows us to get all pets
+    // this allows us to get all
     @GetMapping("/all")
-    public List<VirtualPet> findAllVirtualPets() {
-        return this.nasaServ.getAllVirtualPets();
+    public List<Nasa> findAllNasaFacts() {
+        return (List<Nasa>) this.nasaServ.getAllNasaFacts();
     }
 
     // this allows us to find a pet by it Id
-    //@GetMapping("/{date}")
-    //public Nasa findNasaFactByDate(@PathVariable String date) {
-        //return this.nasaServ.getVirtualPetById(id);
-    
-
-    // this allows user to change a current pet based on id selected
-    //@PutMapping("/{id}")
-    //public VirtualPet modifyUser(@PathVariable long id, @RequestBody VirtualPet updatedVirtualPet) {
-        //return this.nasaServ.updateVirtualPet(id, updatedVirtualPet);
-    
+    @GetMapping("/{date}")
+    public Nasa findNasaFactByDate(@PathVariable String date) {
+        return this.nasaServ.getNasaFactByDate(date);
+    }
 
     // this allows us to delete a pet based on its ID
     @DeleteMapping("/{id}")
-    public void removeVirtualPet(@PathVariable long id) {
-        this.nasaServ.deleteVirtualPet(id);
+    public void removeNasaFact(@PathVariable long id) {
+        this.nasaServ.deleteNasaFact(id);
     }
 }
+

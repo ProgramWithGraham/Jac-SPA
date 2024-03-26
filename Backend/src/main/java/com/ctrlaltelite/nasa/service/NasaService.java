@@ -19,49 +19,31 @@ public class NasaService {
     private NasaRepository nasaRepo;
 
     /*
-     * Adds a new Pet to the repository (db)
+     * saves Nasa Fact to the repository (db)
      */
-    public void saveFact( Nasa nasa) {
+    public void saveFact(Nasa nasa) {
         nasaRepo.save(nasa);
-        nasaRepo.
     }
 
     /*
-     * Gets all the pets in the repo (db)
+     * Gets all the Nasa facts (db)
      */
-    public List<VirtualPet> getAllVirtualPets() {
-        return this.virtualPetRepo.findAll();
+    public List<Nasa> getAllNasaFacts() {
+        return this.nasaRepo.findAll();
     }
 
-    // delete a pet per selected Id
-    public void deleteVirtualPet(long id) {
-        this.virtualPetRepo.findById(id)
+    // delete a saved Nasa fact per selected Id
+    public void deleteNasaFact(long id) {
+        this.nasaRepo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + id));
-        this.virtualPetRepo.deleteById(id);
+        this.nasaRepo.deleteById(id);
     }
 
     /*
-     * Gets a specific Pet by its Id
+     * Gets a specific Nasa Fact by its date
      */
-    //public Nasa getNasaFactByDate(String date) {
-        //return this.nasaRepo.findByDate(date)
-               // .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + id));
-    
-
-    /*
-     * Updates an existing Pet
-     */
-    public VirtualPet updateVirtualPet(long id, VirtualPet updatedVirtualPet) {
-        VirtualPet existingVirtualPet = this.virtualPetRepo.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + id));
-
-        // Updating Pet Profile
-        existingVirtualPet.setPetName(updatedVirtualPet.getPetName());
-        existingVirtualPet.setPetDescription(updatedVirtualPet.getPetDescription());
-        existingVirtualPet.setHungerLevel(updatedVirtualPet.getHungerLevel());
-        existingVirtualPet.setThirstLevel(updatedVirtualPet.getThirstLevel());
-        existingVirtualPet.setBoredomLevel(updatedVirtualPet.getBoredomLevel());
-        this.virtualPetRepo.save(existingVirtualPet);
-        return existingVirtualPet;
+    public Nasa getNasaFactByDate(String date) {
+        return this.nasaRepo.findByDate(date)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + date));
     }
 }
