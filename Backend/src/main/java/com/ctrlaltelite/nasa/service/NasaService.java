@@ -35,15 +35,15 @@ public class NasaService {
     // delete a saved Nasa fact per selected Id
     public void deleteNasaFact(long id) {
         this.nasaRepo.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + id));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Fact not found: " + id));
         this.nasaRepo.deleteById(id);
     }
 
     /*
      * Gets a specific Nasa Fact by its date
      */
-    public Nasa getNasaFactByDate(String date) {
-        return this.nasaRepo.findByDate(date)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + date));
+    public Nasa getNasaFactByDate(long id) {
+        return this.nasaRepo.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Fact not found: " + id));
     }
 }
