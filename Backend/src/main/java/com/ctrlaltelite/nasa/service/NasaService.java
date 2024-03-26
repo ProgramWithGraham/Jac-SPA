@@ -42,8 +42,8 @@ public class NasaService {
     /*
      * Gets a specific Nasa Fact by its date
      */
-    public Nasa getNasaFactByDate(String date) {
-        return this.nasaRepo.findByDate(date)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + date));
+    public Nasa getNasaFactByDate(long id) {
+        return this.nasaRepo.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pet not found: " + id));
     }
 }
