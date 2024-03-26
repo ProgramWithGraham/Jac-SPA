@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-import DailyImageButton from "./components/DailyImageButton";
+import Home from "./Home.js";
+import About from "./About.js";
+import Contact from "./Contact.js";
+import DailyImageButton from "./components/DailyImageButton.js";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
@@ -50,8 +50,17 @@ function App() {
         </div>
       </Router>
       <DailyImageButton setDailyImage={setDailyImage} />
+      <a
+        href="https://apod.nasa.gov/apod/ap240325.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button>Click</button>
+      </a>
       <img src={dailyImage} alt="NASA" style={{ width: 50, height: 50 }} />
-      <footer />
+      <footer>
+        <p> &copy Ctrl Alt Elite 2024</p>
+      </footer>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import React from "react";
 function DailyImageButton({ setDailyImage }) {
   const fetchDailyImage = () => {
 
-    fetch("https://api.nasa.gov/#:~:text=https%3A//api.nasa.gov/planetary/apod%3Fapi_key%3DDEMO_KEY/SAJF3WueHZsrUhnD47Ikt8PaZu800EOw6VMlVxvE")
+    fetch("https://apod.nasa.gov/apod/ap240325.html")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -23,4 +23,4 @@ function DailyImageButton({ setDailyImage }) {
 }
 
 
-export default DailyImageButton;
+export default DailyImageButton.js;
