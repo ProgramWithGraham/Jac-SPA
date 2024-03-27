@@ -33,8 +33,8 @@ export default class DailyImage extends React.Component {
       <div>
         <img
           src={url}
-          alt="daily image from NASA"
-          style={{ width: 350, height: 350 }}
+          alt="daily input from NASA"
+          style={{ width: 900, height: 500 }}
         />
         <p>{explanation}</p>
       </div>
