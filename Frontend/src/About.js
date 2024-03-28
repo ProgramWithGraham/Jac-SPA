@@ -24,6 +24,20 @@ function About() {
           excited for what the future holds.
         </p>
       </section>
+      <header>
+        <img src="./images/hiitsme.jpg" alt="profile" />
+        <h3>Donald Fletcher</h3>
+      </header>
+
+      <section id="aboutMe">
+        <p>
+          My Name is Donald Fletcher, I am a native of Las Vegas,Nv. I served in
+          the U.S. Army from 2008 - 2016 After Serving Honorably in the military
+          I have worked as financial Analyst and also have a Bachelor of Science
+          in Business for the University of phoenix.I am currently Transitioning
+          to a career as a Full Stack Java Developer.
+        </p>
+      </section>
     </div>
   );
 }
