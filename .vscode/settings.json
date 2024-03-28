@@ -1,5 +1,12 @@
 {
   "java.compile.nullAnalysis.mode": "automatic",
   "java.configuration.updateBuildConfiguration": "interactive",
-  "cSpell.words": ["Astro", "Cuevas", "noopener", "noreferrer", "webfonts"]
+  "cSpell.words": [
+    "Astro",
+    "Cuevas",
+    "Millis",
+    "noopener",
+    "noreferrer",
+    "webfonts"
+  ]
 }
