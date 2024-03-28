@@ -4,21 +4,19 @@ function Contact() {
   return (
     <div>
       <header>
-        <h3>Contact Information</h3>
+        <h2>Contact Information</h2>
+
+        <section id="contactInformation">
+          <h3>Kristina Cuevas</h3>
+
+          <a href="https://www.linkedin.com/in/kristina-cuevas-b13bb92a8/">
+            <img src="./images/Linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/tlc67">
+            <img src="./images/Github.png" alt="Github" />
+          </a>
+        </section>
       </header>
-      <section id="contactInformation">
-        <aside class="sidebar">
-          <ul>
-            <li>Kristina Cuevas</li>
-            <li>123 Address</li>
-            <li>216-555-8090</li>
-            <li>abcd@gmail.com</li>
-          </ul>
-        </aside>
-        <a href="https://www.linkedin.com/in/kristina-cuevas-b13bb92a8/">
-          <img src="./images/Linkedin.png" alt="LinkedIn" />
-        </a>
-      </section>
     </div>
   );
 }
