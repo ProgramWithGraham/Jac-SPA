@@ -24,11 +24,19 @@ function About() {
           excited for what the future holds.
         </p>
       </section>
+
+      <header>
+        <img src="./images/.jpg" alt="profile" />
+        <h3>Tarrah</h3>
+      </header>
+      <section id="aboutMe">
+        <p>Tarrah,Tarrah,Tarrah,Tarrah</p>
+      </section>
+
       <header>
         <img src="./images/hiitsme.jpg" alt="profile" />
         <h3>Donald Fletcher</h3>
       </header>
-
       <section id="aboutMe">
         <p>
           My Name is Donald Fletcher, I am a native of Las Vegas,Nv. I served in
@@ -36,6 +44,24 @@ function About() {
           I have worked as financial Analyst and also have a Bachelor of Science
           in Business for the University of phoenix.I am currently Transitioning
           to a career as a Full Stack Java Developer.
+        </p>
+      </section>
+
+      <header>
+        <img src="./images/Adrian.jpg" alt="profile" />
+        <h3>Adrian Graham</h3>
+      </header>
+      <section id="aboutMe">
+        <p>
+          Hello, I have over a decades worth of background in logistics and
+          customer service. I am working towards changing my career path with
+          the skills I learned from WeCanCodeIt towards being a Software
+          developer. Learning to utilize my strong attention to details and my
+          problem solving skills through different formats of coding and their
+          associated programs. In my free time I enjoy building furniture from
+          scratch in my garage for my home and for my friends, maintaining and
+          updating my home with different projects, video games, and collecting
+          memorabilia.
         </p>
       </section>
     </div>
