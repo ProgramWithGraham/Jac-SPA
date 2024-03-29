@@ -4,14 +4,21 @@ import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 import DailyImage from "./DailyImage";
+import FavoritesButton from "./components/FavoritesButton";
+import SaveButton from "./components/SaveButton";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import FavoritesList from "./components/FavoriteList";
 
 function App() {
   const [dailyImage, setDailyImage] = useState();
+  const [favorites, setFavorites] = useState([]);
 
   return (
     <div className="App">
+      <FavoritesButton setFavorites={setFavorites} />
+      <FavoritesList favorites={favorites} />
+      <SaveButton fact={fact} />
       <Router>
         <header>
           <div>
