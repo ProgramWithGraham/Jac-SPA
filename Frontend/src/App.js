@@ -5,10 +5,10 @@ import About from "./About";
 import Contact from "./Contact";
 import DailyImage from "./DailyImage";
 import FavoritesButton from "./components/FavoritesButton";
+import FavoritesList from "./components/FavoriteList";
 import SaveButton from "./components/SaveButton";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import FavoritesList from "./components/FavoriteList";
 
 function App() {
   const [dailyImage, setDailyImage] = useState();
