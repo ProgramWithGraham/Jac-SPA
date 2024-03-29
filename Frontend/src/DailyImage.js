@@ -1,49 +1,35 @@
-import React from "react";
-export default class DailyImage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      url: "",
-      explanation: "",
+import React, { useState, useEffect } from "react";
+
+export default function DailyImage() {
+  const [url, setUrl] = useState("");
+  const [explanation, setExplanation] = useState("");
+
+  useEffect(() => {
+    const fetchDailyImage = async () => {
+      const randomDate = getRandomDate(startDate, endDate);
+      const formattedDate = formatDate(randomDate);
+      const response = await fetch(
+        "https://api.nasa.gov/planetary/apod?api_key=SAJF3WueHZsrUhnD47Ikt8PaZu800EOw6VMlVxvE&date=" +
+          formattedDate
+      );
+      const data = await response.json();
+      setUrl(data.url);
+      setExplanation(data.explanation);
     };
-    this.fetchDailyImage = this.fetchDailyImage.bind(this);
-  }
 
-  fetchDailyImage(formattedDate) {
-    fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=SAJF3WueHZsrUhnD47Ikt8PaZu800EOw6VMlVxvE&date=" +
-        formattedDate
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          url: data.url,
-          explanation: data.explanation,
-        });
-      });
-  }
+    fetchDailyImage();
+  }, []); // Empty dependency array ensures this effect runs only once after initial render
 
-  componentDidMount() {
-    const randomDate = getRandomDate(startDate, endDate);
-    const formattedDate = formatDate(randomDate);
-    this.fetchDailyImage(formattedDate);
-  }
-
-  render() {
-    let url = this.state.url;
-    let explanation = this.state.explanation;
-
-    return (
-      <div>
-        <img
-          src={url}
-          alt="daily input from NASA"
-          style={{ width: 900, height: 500 }}
-        />
-        <p>{explanation}</p>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <img
+        src={url}
+        alt="daily input from NASA"
+        style={{ width: 900, height: 500 }}
+      />
+      <p>{explanation}</p>
+    </div>
+  );
 }
 
 // Define startDate and endDate
