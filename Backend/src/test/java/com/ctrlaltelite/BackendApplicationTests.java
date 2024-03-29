@@ -15,6 +15,10 @@ public class BackendApplicationTests {
     public void setupTestData() {
         // Insert test data into the database
         nasaRepository.save(new Nasa("1988-09-22", "This is an expo", "null", "null", "null", "null"));
+        nasaRepository.save(new Nasa("2024-03-28", "This is an expo", "null", "null", "null", "null"));
+        nasaRepository.save(new Nasa("2007-05-10", "This is an expo", "null", "null", "null", "null"));
+
+
     }
 
 }

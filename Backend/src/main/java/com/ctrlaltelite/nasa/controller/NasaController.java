@@ -31,7 +31,7 @@ public class NasaController {
     }
 
     // save a Nasa fact
-    @PostMapping("/save")
+    @PostMapping()
     public void saveFact(@RequestBody Nasa nasa) {
         nasaServ.saveFact(nasa);
     }
@@ -42,13 +42,13 @@ public class NasaController {
         return (List<Nasa>) this.nasaServ.getAllNasaFacts();
     }
 
-    // this allows us to find a pet by it Id
+    // this allows us to find a facts by it Id
     @GetMapping("/{id}")
     public Nasa findNasaFactByDate(@PathVariable long id) {
         return this.nasaServ.getNasaFactByDate(id);
     }
 
-    // this allows us to delete a pet based on its ID
+    // this allows us to delete a fact based on its Id
     @DeleteMapping("/{id}")
     public void removeNasaFact(@PathVariable long id) {
         this.nasaServ.deleteNasaFact(id);
