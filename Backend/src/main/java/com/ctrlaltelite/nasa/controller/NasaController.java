@@ -39,7 +39,7 @@ public class NasaController {
     // this allows us to get all
     @GetMapping("/all")
     public List<Nasa> findAllNasaFacts() {
-        return (List<Nasa>) this.nasaServ.getAllNasaFacts();
+        return this.nasaServ.getAllNasaFacts();
     }
 
     // this allows us to find a facts by it Id

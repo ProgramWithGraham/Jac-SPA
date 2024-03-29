@@ -4,13 +4,7 @@ function FavoritesList({ favorites }) {
   return (
     <ul>
       {favorites.map((each) => (
-        <li key={each.date}>
-          {each.explanation}
-          {each.hdurl}
-          {each.mediaType}
-          {each.title}
-          {each.url}
-        </li>
+        <li key={each.hdurl}>{each.explanation}</li>
       ))}
     </ul>
   );

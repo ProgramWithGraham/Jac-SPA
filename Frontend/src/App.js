@@ -36,10 +36,16 @@ function App() {
                   <Link to="/dailyImage">Nasa's Daily Image</Link>
                 </li>
                 <li>
-                  <DailyImage set={setExplanation} />
-                  <FavoritesButton setFavorites={setFavorites} />
-                  <FavoritesList favorites={favorites} />
                   <SaveButton fact={fact} />
+                </li>
+                <li>
+                  <FavoritesButton setFavorites={setFavorites} />
+                </li>
+                <li>
+                  <DailyImage set={setExplanation} />
+                </li>
+                <li>
+                  <FavoritesList favorites={favorites} />
                 </li>
               </ul>
             </nav>
