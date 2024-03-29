@@ -11,7 +11,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
-  const [fact, setExplanation] = useState();
+  const [saveFact, setExplanation] = useState();
   const [dailyImage, setDailyImage] = useState();
   const [favorites, setFavorites] = useState([]);
 
@@ -36,13 +36,13 @@ function App() {
                   <Link to="/dailyImage">Nasa's Daily Image</Link>
                 </li>
                 <li>
-                  <SaveButton fact={fact} />
+                  <SaveButton fact={saveFact} />
                 </li>
                 <li>
                   <FavoritesButton setFavorites={setFavorites} />
                 </li>
                 <li>
-                  <DailyImage set={setExplanation} />
+                  <DailyImage setExplanation={setExplanation} />
                 </li>
                 <li>
                   <FavoritesList favorites={favorites} />
@@ -58,7 +58,7 @@ function App() {
           {/* <Route path="/dailyImage" element={<DailyImage />} /> */}
         </Routes>
       </Router>
-
+      <p>{saveFact}</p>
       <footer />
     </div>
   );

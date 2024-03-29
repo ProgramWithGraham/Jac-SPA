@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/nasa")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 
 public class NasaController {
 
@@ -33,11 +35,11 @@ public class NasaController {
     // save a Nasa fact
     @PostMapping()
     public void saveFact(@RequestBody Nasa nasa) {
-        nasaServ.saveFact(nasa);
+        this.nasaServ.saveFact(nasa);
     }
 
     // this allows us to get all
-    @GetMapping("/all")
+    @GetMapping()
     public List<Nasa> findAllNasaFacts() {
         return this.nasaServ.getAllNasaFacts();
     }
