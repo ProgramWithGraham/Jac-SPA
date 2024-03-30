@@ -21,7 +21,7 @@ public class NasaService {
      * saves Nasa Fact to the repository (db)
      */
     public void saveFact(Nasa nasa) {
-        nasaRepo.save(nasa);
+        this.nasaRepo.save(nasa);
     }
 
     /*
