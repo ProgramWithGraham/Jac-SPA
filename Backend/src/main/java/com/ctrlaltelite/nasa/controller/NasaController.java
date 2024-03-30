@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ctrlaltelite.nasa.entity.Nasa;
 import com.ctrlaltelite.nasa.service.NasaService;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/nasa")
@@ -55,11 +54,4 @@ public class NasaController {
     public void removeNasaFact(@PathVariable long id) {
         this.nasaServ.deleteNasaFact(id);
     }
-
-    @GetMapping(params = "/date")
-    public String localDate(
-            @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") final LocalDate date) {
-        return date.toString();
-    }
-
 }

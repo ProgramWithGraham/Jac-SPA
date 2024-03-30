@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import SaveButton from "./SaveButton";
+import FavoritesButton from "./FavoritesButton";
+import FavoritesList from "./FavoriteList";
 
 export default function DailyImage() {
-  const [url, setUrl] = useState("");
-  const [explanation, setExplanation] = useState("");
+  const [imageData, setImageData] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const fetchDailyImage = async () => {
@@ -13,8 +16,7 @@ export default function DailyImage() {
           formattedDate
       );
       const data = await response.json();
-      setUrl(data.url);
-      setExplanation(data.explanation);
+      setImageData(data);
     };
 
     fetchDailyImage();
@@ -22,12 +24,23 @@ export default function DailyImage() {
 
   return (
     <div>
-      <img
-        src={url}
-        alt="daily input from NASA"
-        style={{ width: 900, height: 500 }}
-      />
-      <p>{explanation}</p>
+      {imageData && (
+        <>
+          <img
+            src={imageData.url}
+            alt="daily input from NASA"
+            style={{ width: 900, height: 500 }}
+          />
+          <p>
+            {imageData.date} {imageData.title}
+          </p>
+          <p>{imageData.explanation}</p>
+          <SaveButton imageData={imageData} />
+          <FavoritesButton setFavorites={setFavorites} />
+          <p></p>
+          <FavoritesList favorites={favorites} />
+        </>
+      )}
     </div>
   );
 }

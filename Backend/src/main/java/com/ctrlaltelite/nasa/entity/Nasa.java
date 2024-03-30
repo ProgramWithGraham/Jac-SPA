@@ -31,7 +31,7 @@ public class Nasa {
     @Column(name = "date")
     private String date;
 
-    @Column(name = "explanation")
+    @Column(name = "explanation", length = 1024)
     private String explanation;
 
     @Column(name = "hdurl")

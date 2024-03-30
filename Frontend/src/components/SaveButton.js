@@ -1,22 +1,22 @@
 import React from "react";
 
-function SaveButton({ fact }) {
+function SaveButton({ imageData }) {
   const saveFact = () => {
     fetch("http://localhost:8080/api/nasa", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ text: fact }),
+      body: JSON.stringify(imageData),
     })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        alert("fact was saved as favorite!");
+        alert("Image data was saved as favorite!");
       })
       .catch((error) => {
-        console.error("There was a problem saving the fact:", error);
+        console.error("There was a problem saving the image data:", error);
       });
   };
 
