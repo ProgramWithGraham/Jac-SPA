@@ -3,8 +3,8 @@ import React from "react";
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
-      <p>This is the Home page.</p>
+      <h1>Astrokids Adventures</h1>
+      <img src="./images/roatansunset03.jpg" alt="sunset" />
     </div>
   );
 }
