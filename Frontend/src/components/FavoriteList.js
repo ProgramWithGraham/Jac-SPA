@@ -12,9 +12,11 @@ function FavoritesList({ favorites }) {
           />
           {each.date} {each.title} {each.explanation}
         </li>
-      ))}
+))}
     </ul>
-  );
+        );
 }
 
+
 export default FavoritesList;
+
