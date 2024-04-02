@@ -1,49 +1,63 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-import DailyImage from "./components/DailyImage";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import DailyImage from "./pages/DailyImage";
+import FavoritesButton from "./components/FavoritesButton";
+import FavoritesList from "./components/FavoriteList";
+import SaveButton from "./components/SaveButton";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import SecondAPI from "./pages/SecondAPI";
+import ThirdAPI from "./pages/ThirdAPI";
+import setFavorites from "./components/FavoritesButton";
+import setExplanation from "./pages/DailyImage";
+import favorites from "./components/FavoriteList";
 
 function App() {
-  const [dailyImage, setDailyImage] = useState();
-
   return (
-    <div className="App">
-      <Router>
-        <header>
-          <div>
-            <nav>
-              <ul>
-                <li>
-                  {" "}
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-                <li>
-                  <Link to="/dailyImage">Nasa's Daily Image</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+    <Router>
+      <div className="container">
+        return (
+        <nav className="nav">
+        <Link to="/" className="site-title">
+            AstroKids Adventures
+          </Link>
+          <ul>
+            <li>
+              <Link to="/Home">Home</Link>
+            </li>
+            <li>
+              <Link to="/DailyImage">NASA DAILY IMAGE</Link>
+            </li>
+            <li>
+              <Link to="SecondAPI">SECOND API</Link>
+            </li>
+            <li>
+              <Link to="ThirdAPI">THIRD API</Link>
+            </li>
+            <li>
+              <Link to="/About">ABOUT</Link>
+            </li>
+            <li>
+              <Link to="/Contact">CONTACT</Link>
+            </li>
+          </ul>
+        </nav>
         <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<Home />} />
-          <Route path="/dailyImage" element={<DailyImage />} />
+          <Route path="/DailyImage" element={<DailyImage />} />
+          <Route path="/SecondAPI" element={<SecondAPI />} />
+          <Route path="/ThirdAPI" element={<ThirdAPI />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
+          <FavoritesButton setFavorites={setFavorites} />
+          <DailyImage set={setExplanation} />
+          <FavoritesList favorites={favorites} />
         </Routes>
-      </Router>
-      <footer />
-    </div>
+      </div>
+      <footer class="copyright">Ctrl Alt Elite Copyright &copy; 2024</footer>
+    </Router>
   );
 }
-
 export default App;
