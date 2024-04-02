@@ -13,10 +13,13 @@ function SaveButton({ imageData }) {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        alert("Image data was saved as favorite!");
+        alert("Nasa Image and Fact was saved as a favorite!");
       })
       .catch((error) => {
-        console.error("There was a problem saving the image data:", error);
+        console.error(
+          "There was a problem saving the Nasa Image and Fact:",
+          error
+        );
       });
   };
 
