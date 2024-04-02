@@ -16,11 +16,11 @@ function Contact() {
             <img src="./images/Github.png" alt="Github" />
           </a>
 
-          <h3>Tarrah</h3>
-          <a href="https://www.linkedin.com/">
+          <h3>Tarrah Collert</h3>
+          <a href="https://www.linkedin.com/in/tarrah-collert-472777141/">
             <img src="./images/Linkedin.png" alt="LinkedIn" />
           </a>
-          <a href="https://github.com">
+          <a href="https://github.com/tcollert">
             <img src="./images/Github.png" alt="Github" />
           </a>
 

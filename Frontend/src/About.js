@@ -26,11 +26,23 @@ function About() {
       </section>
 
       <header>
-        <img src="./images/.jpg" alt="profile" />
+        <img src="./images/Collert_Tarrah 10814 (1).jpg" alt="profile" />
         <h3>Tarrah</h3>
       </header>
       <section id="aboutMe">
-        <p>Tarrah,Tarrah,Tarrah,Tarrah</p>
+        <p>
+          I started working in banking back in 2007, and since then, I've had
+          the chance to develop and deepen my expertise over the past 17 years.
+          Currently, I serve as a Compliance Officer, specializing in ensuring
+          that both internal and external regulations and policies are followed.
+          With the experience I've gained throughout my career and the
+          additional skills I've acquired through further education, I'm eager
+          to transition into Software Development. I take pride in staying
+          informed about the latest advancements in my field and continuously
+          seeking more efficient ways to excel in my profession. Transitioning
+          into Software Development presents me with a fresh challenge and an
+          exciting opportunity to explore creativity and innovation.
+        </p>
       </section>
 
       <header>
@@ -39,11 +51,11 @@ function About() {
       </header>
       <section id="aboutMe">
         <p>
-          My Name is Donald Fletcher, I am a native of Las Vegas,Nv. I served in
-          the U.S. Army from 2008 - 2016 After Serving Honorably in the military
-          I have worked as financial Analyst and also have a Bachelor of Science
-          in Business for the University of phoenix.I am currently Transitioning
-          to a career as a Full Stack Java Developer.
+          My name is Donald Fletcher. I am a native of Las Vegas, NV. I served
+          in the U.S. Army from 2008-2016. After serving honorably in the
+          military, I have worked as a financial analyst and also have a
+          Bachelor of Science in Business from the University of Phoenix. I am
+          currently transitioning to a career as a Full Stack Java Developer.
         </p>
       </section>
 
