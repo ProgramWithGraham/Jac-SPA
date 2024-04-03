@@ -31,8 +31,8 @@ public class NasaController {
 
     // save a Nasa fact
     @PostMapping()
-    public void saveFact(@RequestBody Nasa nasa) {
-        this.nasaServ.saveFact(nasa);
+    public void saveNasaFact(@RequestBody Nasa nasa) {
+        this.nasaServ.saveNasaFact(nasa);
     }
 
     // this allows us to get all
