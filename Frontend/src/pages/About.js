@@ -48,7 +48,7 @@ function About() {
       </header>
       <section id="aboutMe">
         <p>
-          My name is Donald Fletcher. I am a native of Las Vegas, NV. I servmain
+          My name is Donald Fletcher. I am a native of Las Vegas, NV. I served
           in the U.S. Army from 2008-2016. After serving honorably in the
           military, I have worked as a financial analyst and also have a
           Bachelor of Science in Business from the University of Phoenix. I am
