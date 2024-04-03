@@ -8,7 +8,6 @@ function About() {
         <img src="./images/picture3.jpeg" alt="profile" />
         <h3>Kristina Cuevas</h3>
       </header>
-
       <section id="aboutMe">
         <p>
           My experience as a catering director has developed my strong customer
@@ -24,7 +23,6 @@ function About() {
           excited for what the future holds.
         </p>
       </section>
-
       <header>
         <img src="./images/Collert_Tarrah 10814 (1).jpg" alt="profile" />
         <h3>Tarrah</h3>
@@ -44,21 +42,19 @@ function About() {
           exciting opportunity to explore creativity and innovation.
         </p>
       </section>
-
       <header>
         <img src="./images/hiitsme.jpg" alt="profile" />
         <h3>Donald Fletcher</h3>
       </header>
       <section id="aboutMe">
         <p>
-          My name is Donald Fletcher. I am a native of Las Vegas, NV. I served
+          My name is Donald Fletcher. I am a native of Las Vegas, NV. I servmain
           in the U.S. Army from 2008-2016. After serving honorably in the
           military, I have worked as a financial analyst and also have a
           Bachelor of Science in Business from the University of Phoenix. I am
           currently transitioning to a career as a Full Stack Java Developer.
         </p>
       </section>
-
       <header>
         <img src="./images/Adrian.jpg" alt="profile" />
         <h3>Adrian Graham</h3>
@@ -79,5 +75,4 @@ function About() {
     </div>
   );
 }
-
 export default About;

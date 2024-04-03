@@ -4,7 +4,7 @@ function Home() {
   return (
     <div>
       <h1>Astrokids Adventures</h1>
-      <img src="./images/roatansunset03.jpg" alt="sunset" />
+      <img src="./images/AdobeStock_581980254.jpeg" alt="open book" />
     </div>
   );
 }
