@@ -39,6 +39,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -47,7 +49,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
   margin: 100em;
   max-width: 800px;
   grid-template-rows: repeat(auto, 1fr);
@@ -69,8 +70,10 @@ body {
   margin: 1rem;
   text-align: center;
 }
+
 body {
   margin: 0;
+  max-height: 10000px;
 }
 
 .nav {
