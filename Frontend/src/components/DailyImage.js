@@ -7,7 +7,7 @@ import FindByDateButton from "./FindByDateButton";
 export default function DailyImage() {
   const [imageData, setImageData] = useState(null);
   const [favorites, setFavorites] = useState([]);
- // const [date, setfindByDateButton] = useState([]);
+  // const [date, setFindByDateButton] = useState([]);
 
   useEffect(() => {
     const fetchDailyImage = async () => {
@@ -41,7 +41,7 @@ export default function DailyImage() {
           <FavoritesButton setFavorites={setFavorites} />
           <p></p>
           <FavoritesList favorites={favorites} />
-{/* <FindByDateButton findByDateButton ={date} /> */}
+          {/* <FindByDateButton findByDateButton ={date} /> */}
         </>
       )}
     </div>
