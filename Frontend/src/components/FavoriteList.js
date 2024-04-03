@@ -5,8 +5,8 @@ function FavoritesList({ favorites }) {
     <ul>
       {favorites.map((each) => (
         <li>
-        <li key={each.date}>{each.explanation}</li>
-
+          {each.date}
+          {each.title} {each.explanation}
           <img
             src={each.url}
             alt="daily input from NASA"
