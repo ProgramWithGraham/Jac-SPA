@@ -3,16 +3,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import DailyImage from "./components/DailyImage";
-import FavoritesButton from "./components/FavoritesButton";
-import FavoritesList from "./components/FavoriteList";
-import SaveButton from "./components/SaveButton";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import SecondAPI from "./pages/SecondAPI";
 import ThirdAPI from "./pages/ThirdAPI";
-import setFavorites from "./components/FavoritesButton";
-import setExplanation from "./components/DailyImage";
-import favorites from "./components/FavoriteList";
 
 function App() {
   const [dailyImage, setDailyImage] = useState();
@@ -60,12 +54,10 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
-        <FavoritesButton setFavorites={setFavorites} />
-        <DailyImage set={setExplanation} />
-        <FavoritesList favorites={favorites} />
       </Router>
       <footer class="copyright">Ctrl Alt Elite Copyright &copy; 2024</footer>
     </div>
   );
 }
+
 export default App;

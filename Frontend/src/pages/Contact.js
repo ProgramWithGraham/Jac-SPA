@@ -7,7 +7,7 @@ function Contact() {
         <h2>Contact Information</h2>
         <section id="contactInformation">
           <h3>Kristina Cuevas</h3>
-          <a href="https://www.linkedin.com/in/kristina-cuevas-b13bb92a8/
+          <a href="https://www.linkedin.com/in/kristina-cuevas-b13bb92a8/">
             <img src="./images/Linkedin.png" alt="LinkedIn" />
           </a>
           <a href="https://github.com/tlc67">
