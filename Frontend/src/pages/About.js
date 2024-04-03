@@ -25,7 +25,7 @@ function About() {
       </section>
       <header>
         <img src="./images/Collert_Tarrah 10814 (1).jpg" alt="profile" />
-        <h3>Tarrah Collert</h3>
+        <h3>Tarrah</h3>
       </header>
       <section id="aboutMe">
         <p>
@@ -48,7 +48,7 @@ function About() {
       </header>
       <section id="aboutMe">
         <p>
-          My Name is Donald Fletcher. I am a native of Las Vegas, Nv. I served
+          My name is Donald Fletcher. I am a native of Las Vegas, NV. I servmain
           in the U.S. Army from 2008-2016. After serving honorably in the
           military, I have worked as a financial analyst and also have a
           Bachelor of Science in Business from the University of Phoenix. I am

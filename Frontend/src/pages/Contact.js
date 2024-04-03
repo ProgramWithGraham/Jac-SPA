@@ -7,13 +7,13 @@ function Contact() {
         <h2>Contact Information</h2>
         <section id="contactInformation">
           <h3>Kristina Cuevas</h3>
-          <a href="https://www.linkedin.com/in/kristina-cuevas-b13bb92a8/">
+          <a href="https://www.linkedin.com/in/kristina-cuevas-b13bb92a8/
             <img src="./images/Linkedin.png" alt="LinkedIn" />
           </a>
           <a href="https://github.com/tlc67">
             <img src="./images/Github.png" alt="Github" />
           </a>
-          <h3>Tarrah Collert </h3>
+          <h3>Tarrah Collert</h3>
           <a href="https://www.linkedin.com/in/tarrah-collert-472777141/">
             <img src="./images/Linkedin.png" alt="LinkedIn" />
           </a>
