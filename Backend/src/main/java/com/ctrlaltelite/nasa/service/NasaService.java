@@ -20,12 +20,12 @@ public class NasaService {
     /*
      * saves Nasa Fact to the repository (db)
      */
-    public void saveFact(Nasa nasa) {
+    public void saveNasaFact(Nasa nasa) {
         this.nasaRepo.save(nasa);
     }
 
     /*
-     * Gets all the Nasa facts (db)
+     * Gets all the Nasa facts that were saved (db)
      */
     public List<Nasa> getAllNasaFacts() {
         return this.nasaRepo.findAll();
