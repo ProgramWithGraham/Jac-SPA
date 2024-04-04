@@ -27,7 +27,7 @@ function App() {
                   <Link to="/DailyImage">NASA Daily Image</Link>
                 </li>
                 <li>
-                  <Link to="/RandomFact">Random Fact</Link>
+                  <Link to="/RandomFact">Random Joke</Link>
                 </li>
                 <li>
                   <Link to="/About">About</Link>
