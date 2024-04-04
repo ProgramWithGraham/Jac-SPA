@@ -1,8 +1,8 @@
 import React from "react";
 
-function RandomFactButton({ setRandomFact }) {
+function FunFavoriteButton({ setRandomFact }) {
   const fetchRandomFact = () => {
-    fetch("http://api.fungenerators.com/fact/random?")
+    fetch("http://localhost:8080/api/fun")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -19,4 +19,4 @@ function RandomFactButton({ setRandomFact }) {
   return <button onClick={fetchRandomFact}>Get Random Fact</button>;
 }
 
-export default RandomFactButton;
+export default FunFavoriteButton;
