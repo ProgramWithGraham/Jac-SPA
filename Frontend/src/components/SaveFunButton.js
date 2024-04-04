@@ -1,13 +1,13 @@
 import React from "react";
 
-function SaveFunButton({ saveFun }) {
+function SaveFunButton({ randomFact }) {
   const saveFunFact = () => {
     fetch("http://localhost:8080/api/fun", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(saveFun),
+      body: JSON.stringify(randomFact),
     })
       .then((response) => {
         if (!response.ok) {

@@ -3,7 +3,9 @@ package com.ctrlaltelite.fun.controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,4 +41,15 @@ public class FunController {
         return this.funServ.getAllFunFacts();
     }
 
+    // this allows us to find a facts by it Id
+    @GetMapping("/{id}")
+    public Fun findFunFactByDate(@PathVariable long id) {
+        return this.funServ.getFunFactById(id);
+    }
+
+    // this allows us to delete a fact based on its Id
+    @DeleteMapping("/{id}")
+    public void removeFunFact(@PathVariable long id) {
+        this.funServ.deleteFunFact(id);
+    }
 }

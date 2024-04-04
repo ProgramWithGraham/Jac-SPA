@@ -5,7 +5,7 @@ import FunFavoritesList from "./FunFavoritesList";
 
 export default function RandomFact() {
   const [randomFact, setRandomFact] = useState(null);
-  const [funFact, setFunFact] = useState([]);
+  const [funFavorites, setFunFact] = useState([]);
 
   useEffect(() => {
     const fetchFunFact = async () => {
@@ -39,7 +39,7 @@ export default function RandomFact() {
           <SaveFunButton randomFact={randomFact} />
           <FunFavoritesButton setFunFact={setFunFact} />
           <p></p>
-          <FunFavoritesList funFact={funFact} />
+          <FunFavoritesList funFavorites={funFavorites} />
         </>
       )}
     </div>
