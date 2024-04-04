@@ -12,8 +12,8 @@ export default function RandomFact() {
       const response = await fetch(
         "https://official-joke-api.appspot.com/random_joke"
       );
-      const data2 = await response.json();
-      setRandomFact(data2);
+      const data = await response.json();
+      setRandomFact(data);
     };
 
     fetchFunFact();

@@ -10,7 +10,7 @@ function FunFavoritesButton({ setFunFact }) {
         return response.json();
       })
       .then((data) => {
-        setFunFact(data.value);
+        setFunFact(data);
       })
       .catch((error) => {
         console.error("There was a problem fetching favorite facts:", error);

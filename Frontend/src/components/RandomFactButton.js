@@ -10,7 +10,7 @@ function RandomFactButton({ setRandomFact }) {
         return response.json();
       })
       .then((data) => {
-        setRandomFact(data.value);
+        setRandomFact(data.setup);
       })
       .catch((error) => {
         console.error("There was a problem fetching the fact:", error);
