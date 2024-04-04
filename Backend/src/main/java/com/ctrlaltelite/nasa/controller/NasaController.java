@@ -43,8 +43,8 @@ public class NasaController {
 
     // this allows us to find a facts by it Id
     @GetMapping("/{id}")
-    public Nasa findNasaFactByDate(@PathVariable long date) {
-        return this.nasaServ.getNasaFactByDate(date);
+    public Nasa findNasaFactById(@PathVariable long id) {
+        return this.nasaServ.getNasaFactById(id);
     }
 
     // this allows us to delete a fact based on its Id
