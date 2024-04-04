@@ -96,13 +96,9 @@ header img {
 p {
   color: black;
 }
-footer {
-  margin: 1em auto;
-  display: inline;
-}
 
 .container {
   display: inline;
-  margin: 1rem;
   text-align: center;
+  width: 100%;
 }

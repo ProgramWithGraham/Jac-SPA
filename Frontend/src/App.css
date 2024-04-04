@@ -22,7 +22,6 @@
 
 html {
   font-size: 16px;
-  margin-top: 2.5em;
   color: rgb(15, 15, 15);
   background: img("./images/AdobeStock_581980254.jpeg") no-repeat center center
     fixed;
@@ -60,6 +59,7 @@ body {
   align-items: center;
   gap: 2rem;
   padding: 0 1rem;
+  width: 100%;
 }
 
 .site-title {
@@ -89,27 +89,6 @@ body {
 }
 .nav li:hover {
   background-color: #777;
-}
-
-.navbar {
-  display: flex;
-  list-style: none;
-  font-size: 0.7em;
-  margin-left: 235px;
-  padding: 10px 20px;
-  font-size: 1.35em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #1e8cf4;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  top: 0px;
-  size: cover;
-  color: white;
-  width: 300%;
-  right: 100%;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-  z-index: 3;
 }
 
 .title {
@@ -168,7 +147,7 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   z-index: 4;
 }
-.mainScreen {
+/* .mainScreen {
   position: fixed;
   top: -50px;
   left: -0.5em;
@@ -183,7 +162,7 @@ body {
   background-color: #f5ede2;
   background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   z-index: -2;
-}
+} */
 .App-link {
   color: #61dafb;
 }
@@ -196,24 +175,20 @@ body {
     transform: rotate(360deg);
   }
 }
-
+/* 
 @media only screen and (max-width: 600px) {
   .header-nav {
     font-size: 0.5em;
     padding: 0;
   }
-}
+} */
 
 .copyright {
-  border: 1px #190d41 solid;
-  padding: 0.4rem;
+  padding: 5em 0 0 45%;
   grid-area: copyright;
   text-align: center;
-  position: relative;
-  bottom: -306px;
-  width: 300%;
   size: cover;
   justify-content: center;
   position: absolute;
-  text-align: center;
+  display: flex;
 }
