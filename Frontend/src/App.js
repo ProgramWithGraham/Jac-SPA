@@ -3,14 +3,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import DailyImage from "./components/DailyImage";
-import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import SecondAPI from "./pages/SecondAPI";
 import ThirdAPI from "./pages/ThirdAPI";
 
 function App() {
-  const [dailyImage, setDailyImage] = useState();
-
   return (
     <div className="container">
       <Router>
