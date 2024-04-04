@@ -1,10 +1,9 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  color: #333;
+  display: inline;
 }
 
 code {
@@ -58,13 +57,13 @@ li {
 }
 
 .modal-content {
-  background-color: #efe6e6;
+  background-color: #5e23df;
   border-radius: 10px;
   padding: 20px;
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(97, 81, 81, 0.515);
 }
 
 .modal h2 {
@@ -92,4 +91,18 @@ li {
 
 header img {
   width: 150px;
+}
+
+p {
+  color: black;
+}
+footer {
+  margin: 1em auto;
+  display: inline;
+}
+
+.container {
+  display: inline;
+  margin: 1rem;
+  text-align: center;
 }

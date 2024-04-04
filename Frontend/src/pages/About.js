@@ -25,7 +25,7 @@ function About() {
       </section>
       <header>
         <img src="./images/Collert_Tarrah 10814 (1).jpg" alt="profile" />
-        <h3>Tarrah</h3>
+        <h3>Tarrah Collert</h3>
       </header>
       <section id="aboutMe">
         <p>

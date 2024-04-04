@@ -4,10 +4,12 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import DailyImage from "./components/DailyImage";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import SecondAPI from "./pages/SecondAPI";
-import ThirdAPI from "./pages/ThirdAPI";
+import RandomFactButton from "./components/RandomFactButton";
 
 function App() {
+  const [dailyImage, setDailyImage] = useState();
+  const [randomFact, setRandomFact] = useState("");
+
   return (
     <div className="container">
       <Router>
@@ -25,19 +27,16 @@ function App() {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/DailyImage">NASA DAILY IMAGE</Link>
+                  <Link to="/DailyImage">NASA Daily Image</Link>
                 </li>
                 <li>
-                  <Link to="SecondAPI">SECOND API</Link>
+                  <Link to="RandomFactButton">Random Fact</Link>
                 </li>
                 <li>
-                  <Link to="ThirdAPI">THIRD API</Link>
+                  <Link to="/About">About</Link>
                 </li>
                 <li>
-                  <Link to="/About">ABOUT</Link>
-                </li>
-                <li>
-                  <Link to="/Contact">CONTACT</Link>
+                  <Link to="/Contact">Contact</Link>
                 </li>
               </ul>
             </nav>
@@ -46,8 +45,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/DailyImage" element={<DailyImage />} />
-          <Route path="/SecondAPI" element={<SecondAPI />} />
-          <Route path="/ThirdAPI" element={<ThirdAPI />} />
+          <Route path="/RandomFactButton" element={<RandomFactButton />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
