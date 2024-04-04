@@ -1,6 +1,5 @@
 package com.ctrlaltelite.nasa.entity;
 
-import java.util.List;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,14 +12,13 @@ import jakarta.persistence.Table;
 
 public class Nasa {
 
-    public Nasa(String date, String explanation, String hdurl, String mediaType, String title, String url) {
+    public Nasa(String hdurl, String url, String date, String explanation, String mediaType, String title) {
+        this.hdurl = hdurl;
+        this.url = url;
         this.date = date;
         this.explanation = explanation;
-        this.hdurl = hdurl;
         this.mediaType = mediaType;
         this.title = title;
-        this.url = url;
-
     }
 
     @Id
@@ -28,23 +26,23 @@ public class Nasa {
     @Column(name = "id")
     private long id;
 
+    @Column(name = "hdurl")
+    private String hdurl;
+
+    @Column(name = "url")
+    private String url;
+
     @Column(name = "date")
     private String date;
 
     @Column(name = "explanation", length = 1024)
     private String explanation;
 
-    @Column(name = "hdurl")
-    private String hdurl;
-
     @Column(name = "media_type")
     private String mediaType;
 
     @Column(name = "title")
     private String title;
-
-    @Column(name = "url")
-    private String url;
 
     public Nasa() {
     }

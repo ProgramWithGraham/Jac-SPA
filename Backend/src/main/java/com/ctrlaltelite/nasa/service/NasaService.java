@@ -20,12 +20,12 @@ public class NasaService {
     /*
      * saves Nasa Fact to the repository (db)
      */
-    public void saveFact(Nasa nasa) {
+    public void saveNasaFact(Nasa nasa) {
         this.nasaRepo.save(nasa);
     }
 
     /*
-     * Gets all the Nasa facts (db)
+     * Gets all the Nasa facts that were saved (db)
      */
     public List<Nasa> getAllNasaFacts() {
         return this.nasaRepo.findAll();
@@ -41,7 +41,7 @@ public class NasaService {
     /*
      * Gets a specific Nasa Fact by its date
      */
-    public Nasa getNasaFactByDate(long id) {
+    public Nasa getNasaFactById(long id) {
         return this.nasaRepo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Fact not found: " + id));
     }

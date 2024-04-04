@@ -1,4 +1,4 @@
-package com.ctrlaltelite.nasa.controller;
+package com.ctrlaltelite.fun.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,18 +10,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ctrlaltelite.nasa.entity.Nasa;
-import com.ctrlaltelite.nasa.service.NasaService;
+import com.ctrlaltelite.fun.entity.Fun;
+import com.ctrlaltelite.fun.service.FunService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-@RequestMapping("/api/nasa")
+@RequestMapping("/api/fun")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 
-public class NasaController {
+public class FunController {
 
     @Autowired
-    private NasaService nasaServ;
+    private FunService funServ;
 
     // used as a way to make sure mapping is working
     @GetMapping("/ping")
@@ -29,27 +29,27 @@ public class NasaController {
         return "pong";
     }
 
-    // save a Nasa fact
+    // save a Fun fact
     @PostMapping()
-    public void saveNasaFact(@RequestBody Nasa nasa) {
-        this.nasaServ.saveNasaFact(nasa);
+    public void saveFunFact(@RequestBody Fun fun) {
+        this.funServ.saveFunFact(fun);
     }
 
     // this allows us to get all
     @GetMapping()
-    public List<Nasa> findAllNasaFacts() {
-        return this.nasaServ.getAllNasaFacts();
+    public List<Fun> findAllFunFacts() {
+        return this.funServ.getAllFunFacts();
     }
 
     // this allows us to find a facts by it Id
     @GetMapping("/{id}")
-    public Nasa findNasaFactById(@PathVariable long id) {
-        return this.nasaServ.getNasaFactById(id);
+    public Fun findFunFactById(@PathVariable long id) {
+        return this.funServ.getFunFactById(id);
     }
 
     // this allows us to delete a fact based on its Id
     @DeleteMapping("/{id}")
-    public void removeNasaFact(@PathVariable long id) {
-        this.nasaServ.deleteNasaFact(id);
+    public void removeFunFact(@PathVariable long id) {
+        this.funServ.deleteFunFact(id);
     }
 }
