@@ -23,7 +23,7 @@
 html {
   font-size: 16px;
   margin-top: 2.5em;
-  color: ivory;
+  color: rgb(15, 15, 15);
   background: img("./images/AdobeStock_581980254.jpeg") no-repeat center center
     fixed;
   background-size: cover;

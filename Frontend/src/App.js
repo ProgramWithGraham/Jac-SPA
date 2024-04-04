@@ -3,14 +3,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import DailyImage from "./components/DailyImage";
-import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import RandomFactButton from "./components/RandomFactButton";
+import RandomFact from "./components/RandomFact";
 
 function App() {
-  const [dailyImage, setDailyImage] = useState();
-  const [randomFact, setRandomFact] = useState("");
-
   return (
     <div className="container">
       <Router>
@@ -31,7 +27,7 @@ function App() {
                   <Link to="/DailyImage">NASA Daily Image</Link>
                 </li>
                 <li>
-                  <Link to="RandomFactButton">Random Fact</Link>
+                  <Link to="/RandomFact">Random Fact</Link>
                 </li>
                 <li>
                   <Link to="/About">About</Link>
@@ -46,7 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/DailyImage" element={<DailyImage />} />
-          <Route path="/RandomFactButton" element={<RandomFactButton />} />
+          <Route path="/RandomFact" element={<RandomFact />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>

@@ -5,13 +5,17 @@ function FavoritesList({ favorites }) {
     <ul>
       {favorites.map((each) => (
         <li>
-          {each.date}
-          {each.title} {each.explanation}
+          <p>
+            ===================================================================
+          </p>
           <img
             src={each.url}
             alt="daily input from NASA"
             style={{ width: 400, height: 400 }}
           />
+          <p></p>
+          {each.date}
+          {each.title} {each.explanation}
         </li>
       ))}
     </ul>

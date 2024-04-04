@@ -2,6 +2,9 @@ package com.ctrlaltelite.fun.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
@@ -9,57 +12,26 @@ import jakarta.persistence.Table;
 
 public class Fun {
 
-    public Fun(String success, String contents, String fact, long id, String category, String subcategory) {
-        this.success = success;
-        this.contents = contents;
-        this.fact = fact;
-        this.id = id;
-        this.category = category;
-        this.subcategory = subcategory;
+    public Fun(String type, String setup, String punchline) {
+        this.type = type;
+        this.setup = setup;
+        this.punchline = punchline;
 
     }
 
-    @Column(name = "success")
-    private String success;
-
-    @Column(name = "contents", length = 1024)
-    private String contents;
-
-    @Column(name = "fact")
-    private String fact;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private long id;
 
-    @Column(name = "category")
-    private String category;
+    @Column(name = "type")
+    private String type;
 
-    @Column(name = "subcategory")
-    private String subcategory;
+    @Column(name = "setup", length = 1024)
+    private String setup;
 
-    public String getSuccess() {
-        return this.success;
-    }
-
-    public void setSuccess(String success) {
-        this.success = success;
-    }
-
-    public String getContents() {
-        return this.contents;
-    }
-
-    public void setContents(String contents) {
-        this.contents = contents;
-    }
-
-    public String getFact() {
-        return this.fact;
-    }
-
-    public void setFact(String fact) {
-        this.fact = fact;
-    }
+    @Column(name = "punchline")
+    private String punchline;
 
     public long getId() {
         return this.id;
@@ -69,20 +41,28 @@ public class Fun {
         this.id = id;
     }
 
-    public String getCategory() {
-        return this.category;
+    public String getType() {
+        return this.type;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getSubcategory() {
-        return this.subcategory;
+    public String getSetup() {
+        return this.setup;
     }
 
-    public void setSubcategory(String subcategory) {
-        this.subcategory = subcategory;
+    public void setSetup(String setup) {
+        this.setup = setup;
+    }
+
+    public String getPunchline() {
+        return this.punchline;
+    }
+
+    public void setPunchline(String punchline) {
+        this.punchline = punchline;
     }
 
 }

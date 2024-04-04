@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SaveButton from "./SaveButton";
 import FavoritesButton from "./FavoritesButton";
-import FavoritesList from "./FavoriteList";
+import FavoritesList from "./FavoritesList";
 
 export default function DailyImage() {
   const [imageData, setImageData] = useState(null);
