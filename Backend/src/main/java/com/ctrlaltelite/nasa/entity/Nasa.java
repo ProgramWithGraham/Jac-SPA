@@ -13,13 +13,12 @@ import jakarta.persistence.Table;
 public class Nasa {
 
     public Nasa(String hdurl, String url, String date, String explanation, String mediaType, String title) {
+        this.hdurl = hdurl;
+        this.url = url;
         this.date = date;
         this.explanation = explanation;
-        this.hdurl = hdurl;
         this.mediaType = mediaType;
         this.title = title;
-        this.url = url;
-
     }
 
     @Id

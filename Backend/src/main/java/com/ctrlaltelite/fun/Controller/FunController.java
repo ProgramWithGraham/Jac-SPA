@@ -43,7 +43,7 @@ public class FunController {
 
     // this allows us to find a facts by it Id
     @GetMapping("/{id}")
-    public Fun findFunFactByDate(@PathVariable long id) {
+    public Fun findFunFactById(@PathVariable long id) {
         return this.funServ.getFunFactById(id);
     }
 
