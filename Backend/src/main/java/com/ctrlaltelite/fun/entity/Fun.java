@@ -16,7 +16,6 @@ public class Fun {
         this.type = type;
         this.setup = setup;
         this.punchline = punchline;
-
     }
 
     @Id
