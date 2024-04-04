@@ -1,88 +1,68 @@
-// package com.ctrlaltelite.fun.entity;
+package com.ctrlaltelite.fun.entity;
 
-// import jakarta.persistence.Column;
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-// @Entity
-// @Table(name = "\"fun\"")
+@Entity
+@Table(name = "\"fun\"")
 
-// public class Fun {
+public class Fun {
 
-//     public Fun(String success, String contents, String fact, long id, String category, String subcategory) {
-//         this.success = success;
-//         this.contents = contents;
-//         this.fact = fact;
-//         this.id = id;
-//         this.category = category;
-//         this.subcategory = subcategory;
+    public Fun(String type, String setup, String punchline) {
+        this.type = type;
+        this.setup = setup;
+        this.punchline = punchline;
 
-//     }
+    }
 
-//     @Column(name = "success")
-//     private String success;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private long id;
 
-//     @Column(name = "contents", length = 1024)
-//     private String contents;
+    @Column(name = "type")
+    private String type;
 
-//     @Column(name = "fact")
-//     private String fact;
+    @Column(name = "setup", length = 1024)
+    private String setup;
 
-//     @Column(name = "id")
-//     private long id;
+    @Column(name = "punchline")
+    private String punchline;
 
-//     @Column(name = "category")
-//     private String category;
+    public long getId() {
+        return this.id;
+    }
 
-//     @Column(name = "subcategory")
-//     private String subcategory;
+    public void setId(long id) {
+        this.id = id;
+    }
 
-//     public String getSuccess() {
-//         return this.success;
-//     }
+    public String getType() {
+        return this.type;
+    }
 
-//     public void setSuccess(String success) {
-//         this.success = success;
-//     }
+    public void setType(String type) {
+        this.type = type;
+    }
 
-//     public String getContents() {
-//         return this.contents;
-//     }
+    public String getSetup() {
+        return this.setup;
+    }
 
-//     public void setContents(String contents) {
-//         this.contents = contents;
-//     }
+    public void setSetup(String setup) {
+        this.setup = setup;
+    }
 
-//     public String getFact() {
-//         return this.fact;
-//     }
+    public String getPunchline() {
+        return this.punchline;
+    }
 
-//     public void setFact(String fact) {
-//         this.fact = fact;
-//     }
+    public void setPunchline(String punchline) {
+        this.punchline = punchline;
+    }
 
-//     public long getId() {
-//         return this.id;
-//     }
-
-//     public void setId(long id) {
-//         this.id = id;
-//     }
-
-//     public String getCategory() {
-//         return this.category;
-//     }
-
-//     public void setCategory(String category) {
-//         this.category = category;
-//     }
-
-//     public String getSubcategory() {
-//         return this.subcategory;
-//     }
-
-//     public void setSubcategory(String subcategory) {
-//         this.subcategory = subcategory;
-//     }
-
-// }
+}

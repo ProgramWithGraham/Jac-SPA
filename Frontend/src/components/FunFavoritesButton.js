@@ -1,7 +1,7 @@
 import React from "react";
 
-function FunFavoriteButton({ setRandomFact }) {
-  const fetchRandomFact = () => {
+function FunFavoritesButton({ setFunFact }) {
+  const fetchFunFact = () => {
     fetch("http://localhost:8080/api/fun")
       .then((response) => {
         if (!response.ok) {
@@ -10,13 +10,13 @@ function FunFavoriteButton({ setRandomFact }) {
         return response.json();
       })
       .then((data) => {
-        setRandomFact(data.value);
+        setFunFact(data.value);
       })
       .catch((error) => {
-        console.error("There was a problem fetching the joke:", error);
+        console.error("There was a problem fetching favorite facts:", error);
       });
   };
-  return <button onClick={fetchRandomFact}>Get Random Fact</button>;
+  return <button onClick={fetchFunFact}>Show favorite facts</button>;
 }
 
-export default FunFavoriteButton;
+export default FunFavoritesButton;

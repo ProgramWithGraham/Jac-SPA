@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-// import SaveFunButton from "./SaveFunButton";
-// import FunFavoritesButton from "./FunFavoritesButton";
-// import FunFavoritesList from "./FunFavoriteList";
+import SaveFunButton from "./SaveFunButton";
+import FunFavoritesButton from "./FunFavoritesButton";
+import FunFavoritesList from "./FunFavoritesList";
 
 export default function RandomFact() {
-  const [randomFact, setRandomFact] = useState();
+  const [randomFact, setRandomFact] = useState(null);
+  const [funFact, setFunFact] = useState([]);
 
   useEffect(() => {
     const fetchFunFact = async () => {
@@ -27,16 +28,18 @@ export default function RandomFact() {
             alt="funPic"
             style={{ width: 900, height: 500 }}
           />
-          <p>{/* {randomFact.category} {randomFact.subcategory} */}</p>
           <p>
             {randomFact.setup}
             <p></p>
-            {randomFact.punchline}
+            <p>
+              Punchline:
+              {randomFact.punchline}
+            </p>
           </p>
-          {/* <SaveFunButton imageData={imageData} />
-          <FunFavoritesButton setFavorites={setFavorites} />
+          <SaveFunButton randomFact={randomFact} />
+          <FunFavoritesButton setFunFact={setFunFact} />
           <p></p>
-          <FunFavoritesList favorites={favorites} /> */}
+          <FunFavoritesList funFact={funFact} />
         </>
       )}
     </div>
