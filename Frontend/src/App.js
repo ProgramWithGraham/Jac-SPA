@@ -4,7 +4,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import DailyImage from "./components/DailyImage";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import RandomFact from "./components/RandomFact";
+import RandomJoke from "./components/RandomJoke";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
                   <Link to="/DailyImage">NASA Daily Image</Link>
                 </li>
                 <li>
-                  <Link to="/RandomFact">Random Joke</Link>
+                  <Link to="/RandomJoke">Random Joke</Link>
                 </li>
                 <li>
                   <Link to="/About">About</Link>
@@ -42,7 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/DailyImage" element={<DailyImage />} />
-          <Route path="/RandomFact" element={<RandomFact />} />
+          <Route path="/RandomJoke" element={<RandomJoke />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
