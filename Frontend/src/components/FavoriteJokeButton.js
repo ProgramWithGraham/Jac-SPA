@@ -1,7 +1,7 @@
 import React from "react";
 
-function FunFavoritesButton({ setFunFact }) {
-  const fetchFunFact = () => {
+function FavoriteJokeButton({ setFavoriteJoke }) {
+  const fetchFavoriteJoke = () => {
     fetch("http://localhost:8080/api/fun")
       .then((response) => {
         if (!response.ok) {
@@ -10,13 +10,13 @@ function FunFavoritesButton({ setFunFact }) {
         return response.json();
       })
       .then((data) => {
-        setFunFact(data);
+        setFavoriteJoke(data);
       })
       .catch((error) => {
-        console.error("There was a problem fetching favorite facts:", error);
+        console.error("There was a problem fetching favorite joke:", error);
       });
   };
-  return <button onClick={fetchFunFact}>Show favorite facts</button>;
+  return <button onClick={fetchFavoriteJoke}>Show favorite joke</button>;
 }
 
-export default FunFavoritesButton;
+export default FavoriteJokeButton;
