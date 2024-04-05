@@ -31,25 +31,25 @@ public class FunController {
 
     // save a Fun fact
     @PostMapping()
-    public void saveFunFact(@RequestBody Fun fun) {
-        this.funServ.saveFunFact(fun);
+    public void saveFunJoke(@RequestBody Fun fun) {
+        this.funServ.saveFunJoke(fun);
     }
 
     // this allows us to get all
     @GetMapping()
-    public List<Fun> findAllFunFacts() {
-        return this.funServ.getAllFunFacts();
+    public List<Fun> findAllFunJokes() {
+        return this.funServ.getAllFunJokes();
     }
 
     // this allows us to find a facts by it Id
     @GetMapping("/{id}")
-    public Fun findFunFactById(@PathVariable long id) {
-        return this.funServ.getFunFactById(id);
+    public Fun findFunJokeById(@PathVariable long id) {
+        return this.funServ.getFunJokeById(id);
     }
 
     // this allows us to delete a fact based on its Id
     @DeleteMapping("/{id}")
-    public void removeFunFact(@PathVariable long id) {
-        this.funServ.deleteFunFact(id);
+    public void removeFunJoke(@PathVariable long id) {
+        this.funServ.deleteFunJoke(id);
     }
 }

@@ -20,19 +20,19 @@ public class FunService {
     /*
      * saves Fun Fact to the repository (db)
      */
-    public void saveFunFact(Fun fun) {
+    public void saveFunJoke(Fun fun) {
         this.funRepo.save(fun);
     }
 
     /*
      * Gets all the Fun facts that were saved (db)
      */
-    public List<Fun> getAllFunFacts() {
+    public List<Fun> getAllFunJokes() {
         return this.funRepo.findAll();
     }
 
     // delete a saved Fun fact per selected Id
-    public void deleteFunFact(long id) {
+    public void deleteFunJoke(long id) {
         this.funRepo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Fact not found: " + id));
         this.funRepo.deleteById(id);
@@ -41,7 +41,7 @@ public class FunService {
     /*
      * Gets a specific Fun Fact by its date
      */
-    public Fun getFunFactById(long id) {
+    public Fun getFunJokeById(long id) {
         return this.funRepo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Fact not found: " + id));
     }
