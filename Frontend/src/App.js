@@ -8,7 +8,7 @@ import RandomJoke from "./components/RandomJoke";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <Router>
         <header>
           <div>

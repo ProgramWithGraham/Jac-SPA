@@ -4,14 +4,7 @@ function JokeFavoritesList({ jokeFavorites }) {
   return (
     <ul>
       {jokeFavorites.map((each) => (
-        <li>
-          <p>
-            ===================================================================
-          </p>
-          <p></p>
-          {each.setup}
-          {each.punchline}
-        </li>
+        <li key={each.setup}>{each.punchline}</li>
       ))}
     </ul>
   );

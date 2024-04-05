@@ -4,11 +4,11 @@ import FavoriteJokeButton from "./FavoriteJokeButton";
 import JokeFavoritesList from "./JokeFavoritesList";
 
 export default function RandomJoke() {
-  const [randomJoke, setRandomJoke] = useState(null);
+  const [randomJoke, setRandomJoke] = useState("");
   const [jokeFavorites, setJokeFavorites] = useState([]);
 
   useEffect(() => {
-    const fetchFavoriteJoke = async () => {
+    const fetchRandomJoke = async () => {
       const response = await fetch(
         "https://official-joke-api.appspot.com/random_joke"
       );
@@ -16,7 +16,7 @@ export default function RandomJoke() {
       setRandomJoke(data);
     };
 
-    fetchFavoriteJoke();
+    fetchRandomJoke();
   }, []); // Empty dependency array ensures this effect runs only once after initial render
 
   return (
@@ -28,16 +28,14 @@ export default function RandomJoke() {
             alt="science kids"
             style={{ width: 1300, height: 550 }}
           />
+          <p>{randomJoke.setup}</p>
           <p>
-            {randomJoke.setup}
-            <p></p>
-            <p>
-              Punchline:
-              {randomJoke.punchline}
-            </p>
+            Punchline:
+            {randomJoke.punchline}
           </p>
+
           <SaveFavoriteJokeButton randomJoke={randomJoke} />
-          <FavoriteJokeButton setFavoriteJoke={setJokeFavorites} />
+          <FavoriteJokeButton setJokeFavorites={setJokeFavorites} />
           <p></p>
           <JokeFavoritesList jokeFavorites={jokeFavorites} />
         </>
