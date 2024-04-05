@@ -26,7 +26,7 @@ export default function RandomFact() {
           <img
             src="./images/AdobeStock_689694687.jpeg"
             alt="funPic"
-            style={{ width: 900, height: 500 }}
+            style={{ width: 1300, height: 550 }}
           />
           <p>
             {randomFact.setup}
