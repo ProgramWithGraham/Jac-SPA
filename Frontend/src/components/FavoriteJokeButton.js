@@ -1,7 +1,7 @@
 import React from "react";
 
 function FavoriteJokeButton({ setFavoriteJoke }) {
-  const fetchFavoriteJoke = () => {
+  const fetchFavoriteJokes = () => {
     fetch("http://localhost:8080/api/fun")
       .then((response) => {
         if (!response.ok) {
@@ -16,7 +16,7 @@ function FavoriteJokeButton({ setFavoriteJoke }) {
         console.error("There was a problem fetching favorite joke:", error);
       });
   };
-  return <button onClick={fetchFavoriteJoke}>Show favorite joke</button>;
+  return <button onClick={fetchFavoriteJokes}>Show favorite jokes</button>;
 }
 
 export default FavoriteJokeButton;

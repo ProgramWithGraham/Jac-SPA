@@ -33,7 +33,6 @@ export default function RandomJoke() {
             Punchline:
             {randomJoke.punchline}
           </p>
-
           <SaveFavoriteJokeButton randomJoke={randomJoke} />
           <FavoriteJokeButton setFavoriteJoke={setFavoriteJoke} />
           <p></p>
