@@ -11,6 +11,8 @@ import jakarta.persistence.Table;
 @Table(name = "\"fun\"")
 
 public class Fun {
+    public Fun() {
+    }
 
     public Fun(String type, String setup, String punchline) {
         this.type = type;
