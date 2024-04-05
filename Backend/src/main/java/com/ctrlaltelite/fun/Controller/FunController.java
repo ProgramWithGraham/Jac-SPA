@@ -1,4 +1,4 @@
-package com.ctrlaltelite.fun.controller;
+package com.ctrlaltelite.fun.Controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
