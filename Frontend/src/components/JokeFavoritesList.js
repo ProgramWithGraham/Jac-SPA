@@ -1,9 +1,9 @@
 import React from "react";
 
-function FunFavoritesList({ funFavorites }) {
+function JokeFavoritesList({ jokeFavorites }) {
   return (
     <ul>
-      {funFavorites.map((each) => (
+      {jokeFavorites.map((each) => (
         <li>
           <p>
             ===================================================================
@@ -17,4 +17,4 @@ function FunFavoritesList({ funFavorites }) {
   );
 }
 
-export default FunFavoritesList;
+export default JokeFavoritesList;
