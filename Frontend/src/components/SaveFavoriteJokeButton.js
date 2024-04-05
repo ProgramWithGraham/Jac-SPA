@@ -7,7 +7,7 @@ function SaveFavoriteJokeButton({ randomJoke }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ setup: randomJoke, punchline: randomJoke }),
+      body: JSON.stringify({ randomJoke }),
     })
       .then((response) => {
         if (!response.ok) {

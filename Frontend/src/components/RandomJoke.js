@@ -5,7 +5,7 @@ import JokeFavoritesList from "./JokeFavoritesList";
 
 export default function RandomJoke() {
   const [randomJoke, setRandomJoke] = useState("");
-  const [jokeFavorites, setJokeFavorites] = useState([]);
+  const [jokeFavorites, setFavoriteJoke] = useState([]);
 
   useEffect(() => {
     const fetchRandomJoke = async () => {
@@ -35,7 +35,7 @@ export default function RandomJoke() {
           </p>
 
           <SaveFavoriteJokeButton randomJoke={randomJoke} />
-          <FavoriteJokeButton setJokeFavorites={setJokeFavorites} />
+          <FavoriteJokeButton setFavoriteJoke={setFavoriteJoke} />
           <p></p>
           <JokeFavoritesList jokeFavorites={jokeFavorites} />
         </>
