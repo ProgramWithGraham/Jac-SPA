@@ -7,6 +7,20 @@
   pointer-events: none;
 }
 
+#LI1,
+#LI2,
+#LI3,
+#LI4,
+#GH1,
+#GH2,
+#GH3,
+#GH4 {
+  position: relative;
+  z-index: 10;
+  width: 75px;
+  height: 75px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -60,6 +74,8 @@ body {
   gap: 2rem;
   padding: 0 1rem;
   width: 100%;
+  z-index: 10;
+  position: relative;
 }
 
 .site-title {
@@ -73,6 +89,9 @@ body {
   display: flex;
   gap: 1rem;
   align-items: stretch;
+  justify-content: center;
+  z-index: 10;
+  width: 100%;
 }
 
 .nav a {
@@ -189,6 +208,81 @@ body {
   text-align: center;
   size: cover;
   justify-content: center;
-  position: absolute;
+  position: relative;
   display: flex;
+  bottom: -5rem;
+  left: 15rem;
+  z-index: 10;
+}
+
+#CI {
+  position: relative;
+  z-index: 10;
+  top: 11rem;
+  color: whitesmoke;
+  left: -5rem;
+}
+#contactInformation {
+  position: relative;
+  z-index: 11;
+  top: 11rem;
+  color: whitesmoke;
+  left: -5rem;
+}
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0em;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  border: 0em transparent ivory;
+  z-index: -5;
+  overflow-x: hidden;
+  overscroll-behavior-y: inline;
+  height: 100%;
+  width: 100%;
+}
+#astro {
+  position: fixed;
+  z-index: 10;
+  color: whitesmoke;
+  font-size: 4.25rem;
+  top: 39%;
+  left: 40.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  -webkit-text-stroke: 2px #0c08089e;
+}
+#kids {
+  position: fixed;
+  z-index: 10;
+  color: whitesmoke;
+  font-size: 4.25rem;
+  top: 46.5%;
+  left: 42rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  -webkit-text-stroke: 2px #0c08089e;
+}
+
+#adventure {
+  position: fixed;
+  z-index: 10;
+  color: whitesmoke;
+  font-size: 4rem;
+  top: 52.75%;
+  left: 36rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  -webkit-text-stroke: 2px #0c08089e;
+}
+#welcome {
+  position: relative;
+  z-index: 10;
+  color: rgb(15, 20, 78);
+  font-size: 1.85rem;
+  top: 10rem;
+  left: 0rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
